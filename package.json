@@ -1,8 +1,8 @@
 {
-  "name": "client",
+  "name": "pick-flicks",
   "version": "2.0.0",
   "private": true,
-  "description": "Project Starter Pack For My React Applications",
+  "description": "Movies App using the TMDB API and Firebase Auth",
   "main": "/src/main.tsx",
   "author": "pHoeniX-svg",
   "license": "MIT",
@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "axios": "^0.25.0",
+    "jest": "^27.5.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
@@ -26,6 +27,7 @@
     "styled-components": "^5.3.3"
   },
   "devDependencies": {
+    "@types/jest": "^27.4.1",
     "@types/react": "^17.0.33",
     "@types/react-dom": "^17.0.10",
     "@types/styled-components": "^5.1.22",
