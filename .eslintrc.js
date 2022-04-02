@@ -7,8 +7,7 @@ module.exports = {
     },
     ecmaVersion: 2021,
     sourceType: 'module',
-    project: './tsconfig.json',
-    tsconfigRootDir: __dirname,
+    project: './tsconfig.eslint.json',
   },
   settings: {
     react: {
@@ -27,8 +26,9 @@ module.exports = {
   env: {
     amd: true,
     browser: true,
-    es2021: true,
     node: true,
+    jest: true,
+    es2021: true,
   },
   plugins: [
     'prettier',

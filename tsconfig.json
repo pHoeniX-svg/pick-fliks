@@ -20,5 +20,6 @@
     },
     "jsx": "react-jsx"
   },
+  "exclude": ["node_modules", "dist", "coverage"],
   "include": ["./src"]
 }
