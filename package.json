@@ -1,5 +1,5 @@
 {
-  "name": "pick-flicks",
+  "name": "pixflix",
   "version": "2.0.0",
   "private": true,
   "description": "Movies App using the TMDB API and Firebase Auth",
