@@ -65,8 +65,8 @@ const basicStyles = css`
   }
 
   body {
-    --clr-primary: hsl(var(--clr-300));
-    /* --clr-accent: hsl(var(--clr-300)); */
+    --clr-primary: hsl(var(--clr-100));
+    --clr-accent: hsl(var(--clr-300));
     --bg-primary: hsl(var(--clr-200));
     /* --bg-accent: hsl(var(--clr-100)); */
     --shadow: 0 0.1rem 0.6rem rgb(0 0 0 / 10%);

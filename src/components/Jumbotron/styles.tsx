@@ -9,15 +9,19 @@ export type Props<T> = {
   onClick: (item: T) => void;
 };
 
-const Container = styled.section``;
-
 const Inner = styled.article<InnnerProps>`
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
+
   max-width: 110rem;
   margin-inline: auto;
+  gap: 3rem;
+
+  & > * {
+    flex: 1;
+  }
 
   @media (min-width: 45em) {
     flex-direction: ${({ direction }) => direction};
@@ -25,18 +29,37 @@ const Inner = styled.article<InnnerProps>`
 `;
 
 const Pane = styled.div`
-  width: 50%;
+  text-align: center;
+
+  @media (min-width: 45em) {
+    text-align: left;
+  }
 `;
+
 const Title = styled.h2`
-  font-size: 4.8rem;
+  font-size: 4.2rem;
   line-height: 1.1;
 `;
 
 const Body = styled.p`
-  font-size: 2.4rem;
-  font-weight: var(--fs-400);
+  font-size: 2.2rem;
   line-height: normal;
 `;
-const Image = styled.img``;
+
+const Image = styled.img`
+  object-fit: cover;
+`;
+
+const Container = styled.section`
+  & > .item {
+    padding-block: 5rem;
+    border-bottom: 0.8rem solid #222;
+    color: var(--clr-primary);
+
+    &:last-of-type ${Body} {
+      margin-bottom: 4rem;
+    }
+  }
+`;
 
 export { Container, Inner, Pane, Title, Body, Image };
