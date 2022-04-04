@@ -8,7 +8,7 @@ const basicStyles = css`
     /* colors */
     --clr-600: 209, 23%, 22%;
     --clr-500: 207, 26%, 17%;
-    --clr-400: 200, 15%, 8%;
+    --clr-400: 0, 0%, 46%;
     --clr-300: 0, 0%, 20%;
     --clr-200: 0, 0%, 0%;
     --clr-100: 0 0% 100%;
@@ -65,10 +65,12 @@ const basicStyles = css`
   }
 
   body {
-    --clr-primary: hsl(var(--clr-100));
     --clr-accent: hsl(var(--clr-300));
+    --clr-primary: hsl(var(--clr-100));
+    --clr-secondary: hsl(var(--clr-400));
+
+    --bg-accent: hsl(var(--clr-100));
     --bg-primary: hsl(var(--clr-200));
-    /* --bg-accent: hsl(var(--clr-100)); */
     --shadow: 0 0.1rem 0.6rem rgb(0 0 0 / 10%);
   }
 

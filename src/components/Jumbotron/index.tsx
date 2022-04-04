@@ -13,7 +13,7 @@ type JumboImgProps = React.PropsWithChildren<{
 
 const Jumbotron = (props: JumboProps) => {
   return (
-    <GlobalContainer className="item" {...props}>
+    <GlobalContainer className="wrapper" {...props}>
       <Inner direction={props?.direction || 'row'}>{props?.children}</Inner>
     </GlobalContainer>
   );

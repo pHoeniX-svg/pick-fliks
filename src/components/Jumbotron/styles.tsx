@@ -14,9 +14,6 @@ const Inner = styled.article<InnnerProps>`
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-
-  max-width: 110rem;
-  margin-inline: auto;
   gap: 3rem;
 
   & > * {
@@ -51,7 +48,7 @@ const Image = styled.img`
 `;
 
 const Container = styled.section`
-  & > .item {
+  & > .wrapper {
     padding-block: 5rem;
     border-bottom: 0.8rem solid #222;
     color: var(--clr-primary);
