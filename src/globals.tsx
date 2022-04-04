@@ -71,13 +71,16 @@ const basicStyles = css`
 
     --bg-accent: hsl(var(--clr-100));
     --bg-primary: hsl(var(--clr-200));
+
+    --section-padding: 15rem;
     --shadow: 0 0.1rem 0.6rem rgb(0 0 0 / 10%);
+    --border-primary: 0.8rem solid hsl(0, 0%, 14%);
   }
 
   /* Set core body defaults */
   body {
     min-height: 100vh;
-    color: var(--clr-primary);
+    color: var(--clr-secondary);
     background-color: var(--bg-primary);
     font-family: var(--ff-primary);
     font-size: var(--fs-300);

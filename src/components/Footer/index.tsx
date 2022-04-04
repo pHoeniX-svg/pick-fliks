@@ -1,5 +1,5 @@
 import { GlobalContainer } from '~src/globals';
-import { Break, Column, Container, Link, Row, Text, Title } from './style';
+import { Break, Column, Container, Link, Row, Text, Title } from './styles';
 
 type FootProps = React.PropsWithChildren<{
   direction?: string;
@@ -10,7 +10,9 @@ type FootProps = React.PropsWithChildren<{
 const Footer = (props: FootProps) => {
   return (
     <Container {...props}>
-      <GlobalContainer className="wrapper">{props?.children}</GlobalContainer>
+      <GlobalContainer className="wrapper" as="section">
+        {props?.children}
+      </GlobalContainer>
     </Container>
   );
 };

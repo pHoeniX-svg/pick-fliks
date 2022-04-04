@@ -49,7 +49,7 @@ const Image = styled.img`
 
 const Container = styled.section`
   & > .wrapper {
-    padding-block: 5rem;
+    padding-block: var(--section-padding);
     border-bottom: 0.8rem solid #222;
     color: var(--clr-primary);
 

@@ -2,7 +2,7 @@ import { Footer } from '~src/components';
 
 const FooterContainer = () => {
   return (
-    <Footer>
+    <Footer aria-label="secondary navigation">
       <Footer.Title>Questions? Contact us.</Footer.Title>
       <Footer.Break />
       <Footer.Row>

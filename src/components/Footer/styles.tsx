@@ -4,9 +4,7 @@ const Container = styled.footer`
   color: var(--clr-secondary);
 
   & > .wrapper {
-    display: flex;
-    flex-direction: column;
-    padding-block: 7rem;
+    padding-block: var(--section-padding);
   }
 `;
 
@@ -16,7 +14,7 @@ const Column = styled.div`
   align-items: flex-start;
 `;
 
-const Row = styled.div`
+const Row = styled.nav`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 2rem;
@@ -35,7 +33,6 @@ const Title = styled.h3`
 const Text = styled.p``;
 
 const Break = styled.div`
-  flex-basis: 100%;
   height: 0;
 `;
 

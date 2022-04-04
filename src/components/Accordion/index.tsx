@@ -1,7 +1,7 @@
 import { createContext, useState } from 'react';
 import { GlobalContainer } from '~src/globals';
 import { useAccordion } from '~src/hooks';
-import { Body, Container, Frame, Header, Item, Title } from './style';
+import { Body, Container, Frame, Header, Item, Title } from './styles';
 
 type AccordionState = boolean;
 type AccordionDispatch = React.Dispatch<React.SetStateAction<boolean>>;
@@ -15,7 +15,19 @@ type AccordionProps = React.PropsWithChildren<{
   href?: string;
 }>;
 
-const AccordionContext = createContext<AccordionContextProps | null>(null);
+const AccordionContext = createContext<AccordionContextProps | undefined>(
+  undefined
+);
+
+export const AccordionProvider = (props: AccordionProps) => {
+  const [isOpen, setIsOpen] = useState<AccordionState>(false);
+
+  return (
+    <AccordionContext.Provider value={{ isOpen, setIsOpen }}>
+      {props?.children}
+    </AccordionContext.Provider>
+  );
+};
 
 const Accordion = (props: AccordionProps) => {
   return (
@@ -30,27 +42,26 @@ Accordion.Frame = function AccordionFrame(props: AccordionProps) {
 };
 
 Accordion.Item = function AccordionItem(props: AccordionProps) {
-  const [isOpen, setIsOpen] = useState<AccordionState>(false);
-
-  return (
-    <AccordionContext.Provider value={{ isOpen, setIsOpen }}>
-      <Item {...props}>{props?.children}</Item>
-    </AccordionContext.Provider>
-  );
-};
-
-Accordion.Header = function AccordionHeader(props: AccordionProps) {
-  const { setIsOpen } = useAccordion();
-
-  return (
-    <Header onClick={() => setIsOpen((prev) => !prev)} {...props}>
-      {props?.children}
-    </Header>
-  );
+  return <Item {...props}>{props?.children}</Item>;
 };
 
 Accordion.Title = function AccordionTitle(props: AccordionProps) {
   return <Title {...props}>{props?.children}</Title>;
+};
+
+Accordion.Header = function AccordionHeader(props: AccordionProps) {
+  const { isOpen, setIsOpen } = useAccordion();
+
+  return (
+    <Header onClick={() => setIsOpen((prev) => !prev)} {...props}>
+      {props?.children}
+      {isOpen ? (
+        <img src="/images/icons/close-slim.png" alt="close" />
+      ) : (
+        <img src="/images/icons/add.png" alt="open" />
+      )}
+    </Header>
+  );
 };
 
 Accordion.Body = function AccordionBody(props: AccordionProps) {
