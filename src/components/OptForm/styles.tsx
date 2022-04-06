@@ -34,14 +34,14 @@ const Button = styled.button`
   padding-inline: 3.2rem;
   border: 0;
   color: var(--clr-primary);
-  background-color: hsl(357, 92%, 47%);
+  background-color: var(--link-normal);
   font-size: 1.6rem;
   font-weight: var(--fw-700);
   text-transform: uppercase;
   cursor: pointer;
 
   &:hover {
-    background-color: hsl(357, 95%, 49%);
+    background-color: var(--link-hover);
   }
 
   @media (min-width: 45em) {

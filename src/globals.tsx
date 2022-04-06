@@ -75,6 +75,9 @@ const basicStyles = css`
     --section-padding: 10rem;
     --shadow: 0 0.1rem 0.6rem rgb(0 0 0 / 10%);
     --border-primary: 0.8rem solid hsl(0, 0%, 14%);
+
+    --link-normal: hsl(357, 92%, 47%);
+    --link-hover: hsl(357, 95%, 49%);
   }
 
   /* Set core body defaults */
@@ -117,9 +120,14 @@ const basicStyles = css`
     list-style: none;
   }
 
-  /* A elements that don't have a class get default styles */
-  a:not([class]) {
-    text-decoration-skip-ink: auto;
+  // reset the default link colors
+  a {
+    color: inherit;
+
+    /* A elements that don't have a class get default styles */
+    &:not([class]) {
+      text-decoration-skip-ink: auto;
+    }
   }
 
   /* TYPOGRAPHY */
@@ -148,11 +156,6 @@ const basicStyles = css`
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
-  }
-
-  // reset the default link colors
-  a {
-    color: inherit;
   }
 
   /* Inherit fonts for form controls */

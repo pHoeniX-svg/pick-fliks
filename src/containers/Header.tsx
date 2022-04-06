@@ -7,14 +7,14 @@ type HeaderProps = React.PropsWithChildren<{
   className?: string;
 }>;
 
-export function HeaderContainer(props: HeaderProps) {
+export const HeaderContainer = ({ children }: HeaderProps) => {
   return (
     <Header>
       <Header.Frame>
         <Header.Logo to={ROUTES.HOME} src={logo} alt="Netflix" />
         <Header.ButtonLink to={ROUTES.SIGN_IN}>Sign In</Header.ButtonLink>
       </Header.Frame>
-      {props?.children}
+      {children}
     </Header>
   );
-}
+};
