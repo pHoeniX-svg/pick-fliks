@@ -10,7 +10,6 @@ type AccordionContextProps = {
   setIsOpen: AccordionDispatch;
 };
 type AccordionProps = React.PropsWithChildren<{
-  direction?: string;
   className?: string;
   href?: string;
 }>;

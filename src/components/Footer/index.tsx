@@ -1,13 +1,12 @@
 import { GlobalContainer } from '~src/globals';
 import { Break, Column, Container, Link, Row, Text, Title } from './styles';
 
-type FootProps = React.PropsWithChildren<{
-  direction?: string;
+type FooterProps = React.PropsWithChildren<{
   className?: string;
   href?: string;
 }>;
 
-const Footer = (props: FootProps) => {
+const Footer = (props: FooterProps) => {
   return (
     <Container {...props}>
       <GlobalContainer className="wrapper" as="section">
@@ -17,25 +16,25 @@ const Footer = (props: FootProps) => {
   );
 };
 
-Footer.Row = function FooterRow(props: FootProps) {
+Footer.Row = function FooterRow(props: FooterProps) {
   return <Row {...props}>{props?.children}</Row>;
 };
-Footer.Column = function FooterColumn(props: FootProps) {
+Footer.Column = function FooterColumn(props: FooterProps) {
   return <Column {...props}>{props?.children}</Column>;
 };
 
-Footer.Link = function FooterLink(props: FootProps) {
+Footer.Link = function FooterLink(props: FooterProps) {
   return <Link {...props}>{props?.children}</Link>;
 };
 
-Footer.Title = function FooterTitle(props: FootProps) {
+Footer.Title = function FooterTitle(props: FooterProps) {
   return <Title {...props}>{props?.children}</Title>;
 };
 
-Footer.Text = function FooterText(props: FootProps) {
+Footer.Text = function FooterText(props: FooterProps) {
   return <Text {...props}>{props?.children}</Text>;
 };
-Footer.Break = function FooterBreak(props: FootProps) {
+Footer.Break = function FooterBreak(props: FooterProps) {
   return <Break {...props}>{props?.children}</Break>;
 };
 

@@ -72,7 +72,7 @@ const basicStyles = css`
     --bg-accent: hsl(var(--clr-100));
     --bg-primary: hsl(var(--clr-200));
 
-    --section-padding: 15rem;
+    --section-padding: 10rem;
     --shadow: 0 0.1rem 0.6rem rgb(0 0 0 / 10%);
     --border-primary: 0.8rem solid hsl(0, 0%, 14%);
   }

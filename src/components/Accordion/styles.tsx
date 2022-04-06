@@ -15,6 +15,7 @@ const Frame = styled.div``;
 const Item = styled.article`
   max-width: 54rem;
   margin-bottom: 1rem;
+  margin-inline: auto;
 `;
 
 const Title = styled.h2`
@@ -37,8 +38,12 @@ const Header = styled.h4`
   cursor: pointer;
 
   img {
-    width: 2rem;
+    width: 1.6rem;
     filter: brightness(0) invert(1);
+
+    @media (min-width: 45em) {
+      width: 2.2rem;
+    }
   }
 `;
 

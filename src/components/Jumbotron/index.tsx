@@ -1,14 +1,11 @@
-/* eslint-disable react/prop-types */
 import { GlobalContainer } from '~src/globals';
 import { Body, Container, Image, Inner, Pane, Title } from './styles';
 
 type JumboProps = React.PropsWithChildren<{
   direction?: string;
   className?: string;
-}>;
-type JumboImgProps = React.PropsWithChildren<{
-  src: string;
-  alt: string;
+  src?: string;
+  alt?: string;
 }>;
 
 const Jumbotron = (props: JumboProps) => {
@@ -35,7 +32,7 @@ Jumbotron.Title = function JumbotronTitle(props: JumboProps) {
   return <Title {...props}>{props?.children}</Title>;
 };
 
-Jumbotron.Image = function JumbotronImage(props: JumboImgProps) {
+Jumbotron.Image = function JumbotronImage(props: JumboProps) {
   return <Image {...props} />;
 };
 
